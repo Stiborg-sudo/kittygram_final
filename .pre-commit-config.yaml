@@ -1,0 +1,20 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-format
+        name: Ruff format
+        entry: ruff format
+        language: python
+        additional_dependencies:
+          - ruff
+        types:
+          - python
+
+      - id: pycodestyle
+        name: pycodestyle
+        entry: pycodestyle --max-line-length=120
+        language: python
+        additional_dependencies:
+          - pycodestyle
+        types:
+          - python
